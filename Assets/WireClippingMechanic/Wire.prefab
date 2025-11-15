@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: f8766c17-aaf8-4b55-9431-de8deea83842
-  instanceId: 2faa6abf-c5c3-4a26-9e1a-14b4347c0eba
+  instanceId: 2ef9c035-7bf8-4e41-8f8f-883cb0cfc1fd
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: f8338144-8280-4ff6-9455-ae2bb9c20fe8
@@ -595,7 +595,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 7358e191-33b7-43ca-b066-b2f00531ac66
-  instanceId: 305ff7c3-c7e2-47ba-b575-25521b07818c
+  instanceId: e98d4bd8-21aa-4e0a-98b2-71822d104cab
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -615,7 +615,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7696906425097477933}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
