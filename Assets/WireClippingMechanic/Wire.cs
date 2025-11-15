@@ -68,7 +68,7 @@ public class Wire : MonoBehaviour
     {
         if (isPinching && !Snipped)
         {
-            if (Vector3.Distance(pinchPosition, transform.position) < .2f)
+            if (Vector3.Distance(pinchPosition, transform.position) < .05f)
             {
                 NonCutWireModel.SetActive(false);
                 CutWireModel.SetActive(true);
