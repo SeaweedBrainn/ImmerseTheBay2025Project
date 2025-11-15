@@ -16,7 +16,7 @@ MonoBehaviour:
   allowOptional3DofHeadTracking: 0
   handTrackingSupport: 1
   handTrackingFrequency: 0
-  handTrackingVersion: 0
+  handTrackingVersion: 2
   anchorSupport: 1
   sharedAnchorSupport: 0
   renderModelSupport: 0
@@ -25,25 +25,20 @@ MonoBehaviour:
   faceTrackingSupport: 0
   eyeTrackingSupport: 0
   virtualKeyboardSupport: 0
-  colocationSessionSupport: 0
   sceneSupport: 2
-  boundaryVisibilitySupport: 0
   disableBackups: 1
   enableNSCConfig: 1
   securityXmlPath: 
-  horizonOsSdkEnabled: 0
-  minHorizonOsSdkVersion: 60
-  targetHorizonOsSdkVersion: 81
   skipUnneededShaders: 0
   enableIL2CPPLTO: 0
-  removeGradleManifest: 1
   focusAware: 1
   requiresSystemKeyboard: 0
   experimentalFeaturesEnabled: 0
   insightPassthroughEnabled: 0
   _insightPassthroughSupport: 1
-  isPassthroughCameraAccessEnabled: 0
   _processorFavor: 0
   systemSplashScreen: {fileID: 0}
   systemSplashScreenType: 0
   _systemLoadingScreenBackground: 1
+  ovrPluginMd5Win64: e8cfe66d40bc858ac6a51dd265d3b2f72a8475b29ab084375dbd707b2d941195
+  ovrPluginMd5Android: c7bb9a379e186c4b2726b69bbb7d3ace285b14d6cbdc5a10c58bfc3617ff0aba
