@@ -12,7 +12,8 @@ public class Wire : MonoBehaviour
 
     void Start()
     {
-
+        NonCutWireModel.SetActive(true);
+        CutWireModel.SetActive(false);
     }
 
     void Update()
