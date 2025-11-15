@@ -6215,7 +6215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca8bdc5f3cbc140768403236021e66cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1794460371201807416, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
+  prefab: {fileID: 1237765573127138880, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
   rightHandRayStart: {fileID: 2121401709}
   leftHandRayStart: {fileID: 1897686843}
   rayLength: 0.5
