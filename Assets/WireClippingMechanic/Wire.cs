@@ -1,5 +1,6 @@
 using UnityEngine;
 using OVR;
+using UnityEngine.Events;
 
 public class Wire : MonoBehaviour
 {
@@ -10,9 +11,9 @@ public class Wire : MonoBehaviour
 
     public Transform LeftPinchSphere, RightPinchSphere;
 
-    public UnityEvent OnSnipEvent;
-
     public bool Snipped = false;
+
+    public UnityEvent OnSnipEvent;
 
     void Start()
     {
