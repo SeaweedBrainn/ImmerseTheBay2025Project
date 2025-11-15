@@ -4,7 +4,7 @@ using UnityEngine.Serialization;
 
 public class SpawnObject : MonoBehaviour
 {
-    [SerializeField] GameObject prefab;
+    [SerializeField] GameObject gameObjectToSpawn;
     [SerializeField] private Transform rightHandRayStart;
     [SerializeField] private Transform leftHandRayStart;
     [SerializeField] private float rayLength = 1;
@@ -48,7 +48,10 @@ public class SpawnObject : MonoBehaviour
                 direction.y = 0;
                 Quaternion rotation = Quaternion.LookRotation(direction);
 
-                Instantiate(prefab, hitPoint, rotation);
+                gameObjectToSpawn.SetActive(true);
+                gameObjectToSpawn.transform.position = hitPoint;
+                gameObjectToSpawn.transform.rotation = rotation;
+                
                 this.gameObject.SetActive(false);
             }
         }
@@ -67,7 +70,10 @@ public class SpawnObject : MonoBehaviour
                 direction.y = 0;
                 Quaternion rotation = Quaternion.LookRotation(direction);
 
-                Instantiate(prefab, hitPoint, rotation);
+                gameObjectToSpawn.SetActive(true);
+                gameObjectToSpawn.transform.position = hitPoint;
+                gameObjectToSpawn.transform.rotation = rotation;
+                
                 this.gameObject.SetActive(false);
             }
         }
