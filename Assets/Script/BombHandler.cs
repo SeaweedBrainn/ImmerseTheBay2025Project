@@ -39,7 +39,7 @@ public class BombHandler : MonoBehaviour
 
     void UpdateDisplay()
     {
-        if (timerText != null)
+        if (timerText)
         {
             if (countdownTime > 0)
             {
@@ -71,7 +71,7 @@ public class BombHandler : MonoBehaviour
         if (hasExploded) return;
         if (strikeIndex < 0 || strikeIndex >= strikeObjects.Length) return;
         if (objectReplaced[strikeIndex]) return;
-        if (strikeObjects[strikeIndex] != null && replacementPrefab != null)
+        if (strikeObjects[strikeIndex] && replacementPrefab)
         {
             Vector3 position = strikeObjects[strikeIndex].transform.position;
             Quaternion rotation = strikeObjects[strikeIndex].transform.rotation;
@@ -112,7 +112,7 @@ public class BombHandler : MonoBehaviour
         hasExploded = true;
         for (int i = 0; i < strikeObjects.Length; i++)
         {
-            if (strikeObjects[i] != null && replacementPrefab != null)
+            if (strikeObjects[i] && replacementPrefab)
             {
                 Vector3 position = strikeObjects[i].transform.position;
                 Quaternion rotation = strikeObjects[i].transform.rotation;
@@ -122,7 +122,7 @@ public class BombHandler : MonoBehaviour
                 Destroy(strikeObjects[i]);
             }
         }
-        if (timerText != null)
+        if (timerText)
         {
             timerText.text = "EXPLODED!";
         }
