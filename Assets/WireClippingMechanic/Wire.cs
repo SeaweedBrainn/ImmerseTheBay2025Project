@@ -9,40 +9,58 @@ public class Wire : MonoBehaviour
 
     public OVRHand LeftHand, RightHand;
 
-    public Transform LeftPinchSphere, RightPinchSphere;
-
     public bool Snipped = false;
 
     public UnityEvent OnSnipEvent;
+
+    AudioSource audioSource;
+
+    bool LeftHandPinching;
+    bool RightHandPinching;
 
     void Start()
     {
         NonCutWireModel.SetActive(true);
         CutWireModel.SetActive(false);
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
     {
-        bool LeftHandPinching = LeftHand.GetFingerIsPinching(OVRHand.HandFinger.Index);
-        bool RightHandPinching = RightHand.GetFingerIsPinching(OVRHand.HandFinger.Index);
+        bool prevLeftHandPinching = LeftHandPinching;
+        bool prevRightHandPinching = RightHandPinching;
+
+        LeftHandPinching = LeftHand.GetFingerIsPinching(OVRHand.HandFinger.Index);
+        RightHandPinching = RightHand.GetFingerIsPinching(OVRHand.HandFinger.Index);
+
+        bool LeftPinchPressed = LeftHandPinching && !prevLeftHandPinching;
+        bool LeftPinchReleased = !LeftHandPinching && prevLeftHandPinching;
+
+        bool RightPinchPressed = RightHandPinching && !prevRightHandPinching;
+        bool RightPinchReleased = !RightHandPinching && prevRightHandPinching;
         Vector3 LeftHandPinchPosition = LeftHand.PointerPose.position;
         Vector3 RightHandPinchPosition = RightHand.PointerPose.position;
 
-        LeftPinchSphere.position = LeftHandPinchPosition;
-        RightPinchSphere.position = RightHandPinchPosition;
-
-        if (LeftHandPinching)
+        if (LeftPinchPressed)
         {
+            if (audioSource != null && audioSource.clip != null)
+            {
+                audioSource.PlayOneShot(audioSource.clip);
+            }
             Debug.Log("LeftHandPinching");
         }
-        if (RightHandPinching)
+        if (RightPinchPressed)
         {
+            if (audioSource != null && audioSource.clip != null)
+            {
+                audioSource.PlayOneShot(audioSource.clip);
+            }
             Debug.Log("RightHandPinching");
         }
         if (!Snipped)
         {
-            CutWireWithPinch(LeftHandPinchPosition, LeftHandPinching);
-            CutWireWithPinch(RightHandPinchPosition, RightHandPinching);
+            CutWireWithPinch(LeftHandPinchPosition, LeftPinchPressed);
+            CutWireWithPinch(RightHandPinchPosition, RightPinchPressed);
         }
     }
 
