@@ -10,6 +10,10 @@ public class Wire : MonoBehaviour
 
     public Transform LeftPinchSphere, RightPinchSphere;
 
+    public UnityEvent OnSnipEvent;
+
+    public bool Snipped = false;
+
     void Start()
     {
         NonCutWireModel.SetActive(true);
@@ -34,19 +38,23 @@ public class Wire : MonoBehaviour
         {
             Debug.Log("RightHandPinching");
         }
-
-        CutWireWithPinch(LeftHandPinchPosition, LeftHandPinching);
-        CutWireWithPinch(RightHandPinchPosition, RightHandPinching);
+        if (!Snipped)
+        {
+            CutWireWithPinch(LeftHandPinchPosition, LeftHandPinching);
+            CutWireWithPinch(RightHandPinchPosition, RightHandPinching);
+        }
     }
 
     void CutWireWithPinch(Vector3 pinchPosition, bool isPinching)
     {
-        if (isPinching)
+        if (isPinching && !Snipped)
         {
             if (Vector3.Distance(pinchPosition, transform.position) < .2f)
             {
                 NonCutWireModel.SetActive(false);
                 CutWireModel.SetActive(true);
+                Snipped = true;
+                OnSnipEvent.Invoke();
             }
         }
     }
