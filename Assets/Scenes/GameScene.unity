@@ -993,9 +993,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1964602097}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
+      - m_Target: {fileID: 1964602098}
+        m_TargetAssemblyTypeName: SpawnObject, Assembly-CSharp
+        m_MethodName: SetSpawningStatus
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6353,7 +6353,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1964602098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6366,13 +6366,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca8bdc5f3cbc140768403236021e66cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObjectToSpawn: {fileID: 974427297}
   rightHandRayStart: {fileID: 2121401709}
   leftHandRayStart: {fileID: 1897686843}
   rayLength: 0.5
-  labelFilter: 49151
-  playerCamera: {fileID: 1693600111}
   maxHorizontalAngle: 20
+  isSpawning: 0
+  gameObjectsToSpawn:
+  - {fileID: 974427297}
+  targetLookPosition: {fileID: 1693600111}
+  labelFilter: 49151
 --- !u!4 &1964602099
 Transform:
   m_ObjectHideFlags: 0
@@ -9675,9 +9677,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1964602097}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
+      - m_Target: {fileID: 1964602098}
+        m_TargetAssemblyTypeName: SpawnObject, Assembly-CSharp
+        m_MethodName: SetSpawningStatus
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
