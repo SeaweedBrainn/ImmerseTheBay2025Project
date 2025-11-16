@@ -10,7 +10,7 @@ public class BombHandler : MonoBehaviour
     public Material strikeMaterial;
     [Header("Win Material")]
     public Material winMaterial;
-    
+
     public float countdownTime = 0f;
     public TextMeshPro timerText;
 
@@ -33,6 +33,9 @@ public class BombHandler : MonoBehaviour
 
     void Update()
     {
+        if (hasWon)
+            return;
+
         if (countdownTime > 0 && !hasExploded && currentTime > 0)
         {
             currentTime -= Time.deltaTime;
