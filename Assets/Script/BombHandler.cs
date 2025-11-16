@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using TMPro;
 
 public class BombHandler : MonoBehaviour
@@ -10,6 +11,8 @@ public class BombHandler : MonoBehaviour
     
     public float countdownTime = 0f;
     public TextMeshPro timerText;
+
+    public UnityEvent OnExplodeEvent;
 
     private int strikesRemaining = 3;
     private float currentTime;
@@ -68,14 +71,10 @@ public class BombHandler : MonoBehaviour
         if (strikeObjects[strikeIndex] && strikeMaterial)
         {
             MeshRenderer mr = strikeObjects[strikeIndex].GetComponent<MeshRenderer>();
-            if (mr != null)
-            {
-                mr.material = strikeMaterial;
-            }
+            mr.material = strikeMaterial;
             objectReplaced[strikeIndex] = true;
             Debug.Log("Object replaced: " + objectReplaced[strikeIndex]);
             strikesRemaining--;
-            UpdateDisplay();
             if (strikesRemaining <= 0)
             {
                 Explode();
@@ -102,7 +101,7 @@ public class BombHandler : MonoBehaviour
         hasExploded = true;
         for (int i = 0; i < strikeObjects.Length; i++)
         {
-            if (strikeObjects[i])
+            if (strikeObjects[i] && !objectReplaced[i])
             {
                 MeshRenderer mr = strikeObjects[i].GetComponent<MeshRenderer>();
                 mr.material = strikeMaterial;
@@ -112,6 +111,7 @@ public class BombHandler : MonoBehaviour
         {
             timerText.text = "EXPLODED!";
         }
+        OnExplodeEvent.Invoke();
     }
 
     public void TriggerExplosion()
