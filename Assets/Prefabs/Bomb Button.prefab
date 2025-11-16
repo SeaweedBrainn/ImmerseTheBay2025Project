@@ -1442,7 +1442,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 158667159610838722}
-  - component: {fileID: 4777971987266725048}
   - component: {fileID: 4104879893077481089}
   m_Layer: 0
   m_Name: Bomb Button
@@ -1450,7 +1449,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &158667159610838722
 Transform:
   m_ObjectHideFlags: 0
@@ -1470,22 +1469,6 @@ Transform:
   - {fileID: 5102655751339881663}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4777971987266725048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6534682752008816539}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1e960eb7d5764275887f15d9a4f35c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxWires: 0
-  onFinished:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &4104879893077481089
 MonoBehaviour:
   m_ObjectHideFlags: 0

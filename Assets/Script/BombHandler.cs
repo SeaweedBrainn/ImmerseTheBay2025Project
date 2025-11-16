@@ -150,10 +150,6 @@ public class BombHandler : MonoBehaviour
                 }
             }
         }
-        if (timerText)
-        {
-            timerText.text = "DEFUSED!";
-        }
         OnWinEvent.Invoke();
     }
 }
