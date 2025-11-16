@@ -1,16 +1,26 @@
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class WireMinigame : MonoBehaviour
 {
-    [SerializeField] private int maxWires;
-    [SerializeField] private UnityEvent onFinished;
-    private List<Wire> _wires;
+    [SerializeField] private Wire[] wires;
+    [SerializeField] private UnityEvent correctWireSnipEvent;
+    [SerializeField] private UnityEvent wrongWireSnipEvent;
+    [SerializeField] private UnityEvent victoryEvent;
+    
+    private int _nextWireIndex = 0;
 
-    public void ProcessWire(Wire wire)
+    public void Snip(Wire wire)
     {
-        if(wire.Snipped) _wires.Add(wire);
-        if(_wires.Count >= maxWires) onFinished.Invoke();
+        if (wire == wires[_nextWireIndex])
+        {
+            correctWireSnipEvent?.Invoke();
+            _nextWireIndex++;
+            if(_nextWireIndex >= wires.Length) victoryEvent?.Invoke();
+        }
+        else
+        {
+            wrongWireSnipEvent?.Invoke();
+        }
     }
 }
