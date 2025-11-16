@@ -3,6 +3,8 @@ using UnityEngine.Events;
 
 public class Wire : MonoBehaviour
 {
+    public bool GoodWire;
+
     public GameObject NonCutWireModel;
     public GameObject CutWireModel;
 
@@ -64,7 +66,7 @@ public class Wire : MonoBehaviour
             OnEnterSnipRange.Invoke();
         }
 
-        WireSnipper.OnEnterSnipRangeEvent();
+        WireSnipper.OnEnterSnipRangeEvent(GoodWire);
     }
 
     void OnTriggerStay(Collider other)
@@ -85,6 +87,6 @@ public class Wire : MonoBehaviour
             OnExitSnipRange.Invoke();
         }
 
-        WireSnipper.OnExitSnipRangeEvent();
+        WireSnipper.OnExitSnipRangeEvent(GoodWire);
     }
 }

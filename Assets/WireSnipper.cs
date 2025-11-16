@@ -9,8 +9,8 @@ public class WireSnipper : MonoBehaviour
     public MeshRenderer[] meshRenderers;
 
     public static WireSnipper Instance;
-    public UnityEvent OnEnterSnipRange, OnExitSnipRange, OnSnip;
-
+    public UnityEvent OnEnterSnipRange, OnExitSnipRange, OnSnip,
+        OnEnterGoodSnipRange, OnExitGoodSnipRange, OnEnterBadSnipRange, OnExitBadSnipRange;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -18,12 +18,22 @@ public class WireSnipper : MonoBehaviour
         Instance = this;
     }
 
-    public static void OnEnterSnipRangeEvent()
+    public static void OnEnterSnipRangeEvent(bool GoodWire)
     {
         Debug.Log("OnEnterSnipRangeEvent");
         if (Instance != null)
         {
             Instance.OnEnterSnipRange.Invoke();
+            if (GoodWire)
+            {
+                Debug.Log("OnEnterGOODSnipRangeEvent");
+                Instance.OnEnterGoodSnipRange.Invoke();
+            }
+            else
+            {
+                Debug.Log("OnEnterBADSnipRangeEvent");
+                Instance.OnEnterBadSnipRange.Invoke();
+            }
             if (Instance.meshRenderers != null && Instance.activeMaterial != null)
             {
                 foreach (var renderer in Instance.meshRenderers)
@@ -37,12 +47,22 @@ public class WireSnipper : MonoBehaviour
         }
     }
 
-    public static void OnExitSnipRangeEvent()
+    public static void OnExitSnipRangeEvent(bool GoodWire)
     {
         Debug.Log("OnExitSnipRangeEvent");
         if (Instance != null)
         {
             Instance.OnExitSnipRange.Invoke();
+            if (GoodWire)
+            {
+                Debug.Log("OnExitGOODSnipRangeEvent");
+                Instance.OnExitGoodSnipRange.Invoke();
+            }
+            else
+            {
+                Debug.Log("OnExitBADSnipRangeEvent");
+                Instance.OnExitBadSnipRange.Invoke();
+            }
             if (Instance.meshRenderers != null && Instance.defaultMaterial != null)
             {
                 foreach (var renderer in Instance.meshRenderers)
