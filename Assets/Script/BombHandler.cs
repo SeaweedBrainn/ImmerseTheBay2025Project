@@ -20,6 +20,7 @@ public class BombHandler : MonoBehaviour
     {
         currentTime = countdownTime;
         strikesRemaining = strikeObjects.Length;
+        objectReplaced = new bool[strikeObjects.Length];
         UpdateDisplay();
     }
 
@@ -67,11 +68,18 @@ public class BombHandler : MonoBehaviour
         if (strikeObjects[strikeIndex] && strikeMaterial)
         {
             MeshRenderer mr = strikeObjects[strikeIndex].GetComponent<MeshRenderer>();
-            mr.material = strikeMaterial;
-            
-            strikeObjects[strikeIndex] = null;
+            if (mr != null)
+            {
+                mr.material = strikeMaterial;
+            }
             objectReplaced[strikeIndex] = true;
+            Debug.Log("Object replaced: " + objectReplaced[strikeIndex]);
             strikesRemaining--;
+            UpdateDisplay();
+            if (strikesRemaining <= 0)
+            {
+                Explode();
+            }
         }
     }
 
