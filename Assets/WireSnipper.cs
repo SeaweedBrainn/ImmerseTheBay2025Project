@@ -8,9 +8,13 @@ public class WireSnipper : MonoBehaviour
 
     public MeshRenderer[] meshRenderers;
 
+    public GameObject VisualFeedback;
+
     public static WireSnipper Instance;
     public UnityEvent OnEnterSnipRange, OnExitSnipRange, OnSnip,
         OnEnterGoodSnipRange, OnExitGoodSnipRange, OnEnterBadSnipRange, OnExitBadSnipRange;
+
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -20,6 +24,10 @@ public class WireSnipper : MonoBehaviour
 
     public static void OnEnterSnipRangeEvent(bool GoodWire)
     {
+        if (Instance.VisualFeedback != null)
+        {
+            Instance.VisualFeedback.SetActive(true);
+        }
         Debug.Log("OnEnterSnipRangeEvent");
         if (Instance != null)
         {
@@ -49,6 +57,10 @@ public class WireSnipper : MonoBehaviour
 
     public static void OnExitSnipRangeEvent(bool GoodWire)
     {
+        if (Instance.VisualFeedback != null)
+        {
+            Instance.VisualFeedback.SetActive(false);
+        }
         Debug.Log("OnExitSnipRangeEvent");
         if (Instance != null)
         {
