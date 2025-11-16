@@ -31,6 +31,11 @@ public class Wire : MonoBehaviour
         startPosition = grabbable.transform.position;
     }
 
+    public void SetGoodWire(bool goodWire)
+    {
+        this.GoodWire = goodWire;
+    }
+
     void Update()
     {
         if (grabbable != null && grabbable.transform.position != startPosition)
