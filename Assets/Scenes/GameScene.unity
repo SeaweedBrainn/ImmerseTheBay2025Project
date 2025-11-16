@@ -3135,6 +3135,34 @@ PrefabInstance:
       propertyPath: RightPinchSphere
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3946479603198190956, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
+      propertyPath: OnSnipEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3946479603198190956, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
+      propertyPath: OnSnipEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3946479603198190956, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
+      propertyPath: OnSnipEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 974427298}
+    - target: {fileID: 3946479603198190956, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
+      propertyPath: OnSnipEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3946479603198190956, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
+      propertyPath: OnSnipEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Strike
+      objectReference: {fileID: 0}
+    - target: {fileID: 3946479603198190956, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
+      propertyPath: OnSnipEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BombHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3946479603198190956, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
+      propertyPath: OnSnipEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4021669747383991169, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
       propertyPath: LeftHand
       value: 
@@ -3188,6 +3216,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1237765573127138880, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
   m_PrefabInstance: {fileID: 974427295}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &974427298 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 476023754587381949, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
+  m_PrefabInstance: {fileID: 974427295}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974427297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c204f3d3bd25ee64daebaaf0ef6bb359, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &975953665
 GameObject:
   m_ObjectHideFlags: 0
