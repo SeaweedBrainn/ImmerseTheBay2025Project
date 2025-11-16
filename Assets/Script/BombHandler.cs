@@ -151,6 +151,7 @@ public class BombHandler : MonoBehaviour
                 }
             }
         }
+        UpdateDisplay();
         OnWinEvent.Invoke();
     }
 }
