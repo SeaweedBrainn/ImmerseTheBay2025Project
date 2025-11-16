@@ -62,7 +62,7 @@ public class HapticManager : MonoBehaviour
         SetDevice("1e52");
         LoadUser("ExampleUser");
         ConnectCurrentUserAsync();
-        SetUserVolume(0.04f);
+        SetUserVolume(0.05f);
         new CopyAssets().CopyAllAssets();
         Application.targetFrameRate = 0;
         
