@@ -3178,13 +3178,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8336076399764743084, guid: eb45f690099c6fd4f8719e3b4d51b45a, type: 3}
+      propertyPath: activeMaterial
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8336076399764743084, guid: eb45f690099c6fd4f8719e3b4d51b45a, type: 3}
+      propertyPath: defaultMaterial
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8336076399764743084, guid: eb45f690099c6fd4f8719e3b4d51b45a, type: 3}
       propertyPath: 'meshRenderers.Array.data[0]'
       value: 
-      objectReference: {fileID: 633670833}
+      objectReference: {fileID: 0}
     - target: {fileID: 8336076399764743084, guid: eb45f690099c6fd4f8719e3b4d51b45a, type: 3}
       propertyPath: 'meshRenderers.Array.data[1]'
       value: 
-      objectReference: {fileID: 452806850}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
