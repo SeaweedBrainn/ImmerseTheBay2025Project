@@ -38,7 +38,7 @@ public class Wire : MonoBehaviour
 
     void Update()
     {
-        if (grabbable != null && grabbable.transform.position != startPosition)
+        if (grabbable && grabbable.transform.position != startPosition)
         {
             CutWireWithPinch();
             Destroy(grabbable.gameObject);
@@ -47,18 +47,24 @@ public class Wire : MonoBehaviour
 
     void CutWireWithPinch()
     {
-        if (!Snipped)
+        if (Snipped) return;
+
+        if (GoodWire)
         {
             NonCutWireModel.SetActive(false);
             CutWireModel.SetActive(true);
             Snipped = true;
-            OnSnipEvent.Invoke();
-            WireSnipper.OnSnipEvent();
-            if (audioSource != null && audioSource.clip != null)
+            if (audioSource && audioSource.clip)
             {
                 audioSource.PlayOneShot(audioSource.clip);
             }
+            OnSnipEvent.Invoke();
         }
+        else
+        {
+            OnSnipEvent.Invoke();
+        }
+
     }
 
     void OnTriggerEnter(Collider other)

@@ -51,29 +51,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1e960eb7d5764275887f15d9a4f35c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wires:
-  - {fileID: 9180154491074253276}
-  - {fileID: 3946479603198190956}
-  - {fileID: 4021669747383991169}
-  - {fileID: 5795165546981960420}
+  wires: []
   correctWireSnipEvent:
     m_PersistentCalls:
       m_Calls: []
   wrongWireSnipEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 476023754587381949}
-        m_TargetAssemblyTypeName: BombHandler, Assembly-CSharp
-        m_MethodName: Strike
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   victoryEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -94,9 +78,13 @@ MonoBehaviour:
   - {fileID: 6382470794565287623}
   - {fileID: 4530875607896949264}
   strikeMaterial: {fileID: 2100000, guid: e08dba57945cc7c4e9de4f887b459c2b, type: 2}
+  winMaterial: {fileID: 0}
   countdownTime: 10
   timerText: {fileID: 612365563061325900}
   OnExplodeEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnWinEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &5240480793368819266
@@ -154,9 +142,13 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   strikeMaterial: {fileID: 0}
+  winMaterial: {fileID: 0}
   countdownTime: 10
   timerText: {fileID: 612365563061325900}
   OnExplodeEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnWinEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!23 &1109109576863686016
@@ -351,8 +343,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7595465118244320244, guid: e45d00a1b8d959a4d8f282b27c3ac331, type: 3}
-      propertyPath: OnSnipEvent.m_PersistentCalls.m_Calls.Array.size
+      propertyPath: GoodWire
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7595465118244320244, guid: e45d00a1b8d959a4d8f282b27c3ac331, type: 3}
+      propertyPath: OnSnipEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7595465118244320244, guid: e45d00a1b8d959a4d8f282b27c3ac331, type: 3}
       propertyPath: OnSnipEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -554,7 +550,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7595465118244320244, guid: e45d00a1b8d959a4d8f282b27c3ac331, type: 3}
       propertyPath: OnSnipEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7595465118244320244, guid: e45d00a1b8d959a4d8f282b27c3ac331, type: 3}
       propertyPath: OnSnipEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -663,7 +659,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7595465118244320244, guid: e45d00a1b8d959a4d8f282b27c3ac331, type: 3}
       propertyPath: OnSnipEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7595465118244320244, guid: e45d00a1b8d959a4d8f282b27c3ac331, type: 3}
       propertyPath: OnSnipEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -772,7 +768,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7595465118244320244, guid: e45d00a1b8d959a4d8f282b27c3ac331, type: 3}
       propertyPath: OnSnipEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7595465118244320244, guid: e45d00a1b8d959a4d8f282b27c3ac331, type: 3}
       propertyPath: OnSnipEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
