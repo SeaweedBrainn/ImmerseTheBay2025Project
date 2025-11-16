@@ -15,6 +15,10 @@ public class Wire : MonoBehaviour
     public UnityEvent OnEnterSnipRange;
     public UnityEvent OnExitSnipRange;
 
+    [Header("Cooldown Settings")]
+    public float cooldownTime = 0.2f;
+    public bool canOnlyTriggerOnce = true;
+
     AudioSource audioSource;
 
     Collider WireCollider;
@@ -22,6 +26,7 @@ public class Wire : MonoBehaviour
     public Transform grabbable;
 
     Vector3 startPosition;
+    float lastTriggerTime = -1f;
 
     void Start()
     {
@@ -42,13 +47,25 @@ public class Wire : MonoBehaviour
         if (grabbable && grabbable.transform.position != startPosition)
         {
             CutWireWithPinch();
-            Destroy(grabbable.gameObject);
+            if (GoodWire)
+            {
+                Destroy(grabbable.gameObject);
+            }
+            else
+            {
+                canOnlyTriggerOnce = false;
+                grabbable.transform.position = startPosition;
+            }
         }
     }
 
     void CutWireWithPinch()
     {
-        if (Snipped) return;
+        if (Snipped && GoodWire) return;
+
+        if (Time.time - lastTriggerTime < cooldownTime) return;
+
+        lastTriggerTime = Time.time;
 
         if (GoodWire)
         {
@@ -61,8 +78,9 @@ public class Wire : MonoBehaviour
             }
             OnSnipEvent.Invoke();
         }
-        else
+        else if (!GoodWire && !canOnlyTriggerOnce)
         {
+            canOnlyTriggerOnce = true;
             OnBadSnipEvent.Invoke();
         }
 
