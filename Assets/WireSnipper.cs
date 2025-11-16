@@ -20,6 +20,7 @@ public class WireSnipper : MonoBehaviour
     void Awake()
     {
         Instance = this;
+        Instance.VisualFeedback.SetActive(false);
     }
 
     public static void OnEnterSnipRangeEvent(bool GoodWire)
