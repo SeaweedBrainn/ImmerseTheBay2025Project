@@ -11,7 +11,6 @@ public class Wire : MonoBehaviour
     public bool Snipped = false;
 
     public UnityEvent OnSnipEvent;
-    public UnityEvent OnBadSnipEvent;
     public UnityEvent OnEnterSnipRange;
     public UnityEvent OnExitSnipRange;
 
@@ -63,7 +62,7 @@ public class Wire : MonoBehaviour
         }
         else
         {
-            OnBadSnipEvent.Invoke();
+            OnSnipEvent.Invoke();
         }
 
     }
