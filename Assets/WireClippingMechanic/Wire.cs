@@ -94,9 +94,9 @@ public class Wire : MonoBehaviour
             Debug.Log("Colliding with IndexFingerCollider");
             // Add your collision handling logic here
             OnEnterSnipRange.Invoke();
-        }
 
-        WireSnipper.OnEnterSnipRangeEvent(GoodWire);
+            WireSnipper.OnEnterSnipRangeEvent(GoodWire);
+        }
     }
 
     void OnTriggerStay(Collider other)
@@ -115,8 +115,7 @@ public class Wire : MonoBehaviour
             // No longer colliding with IndexFingerCollider
             Debug.Log("No longer colliding with IndexFingerCollider");
             OnExitSnipRange.Invoke();
+            WireSnipper.OnExitSnipRangeEvent(GoodWire);
         }
-
-        WireSnipper.OnExitSnipRangeEvent(GoodWire);
     }
 }
