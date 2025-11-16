@@ -94,8 +94,6 @@ public class BombHandler : MonoBehaviour
             strikesRemaining--;
             if (strikesRemaining <= 0)
             {
-                hasExploded = true;
-                UpdateDisplay();
                 Explode();
             }
         }
