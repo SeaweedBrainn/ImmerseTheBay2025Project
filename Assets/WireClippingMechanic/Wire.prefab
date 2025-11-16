@@ -334,7 +334,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5000001
+  m_Radius: 2.37
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
@@ -750,12 +750,17 @@ MonoBehaviour:
   OnSnipEvent:
     m_PersistentCalls:
       m_Calls: []
+  OnBadSnipEvent:
+    m_PersistentCalls:
+      m_Calls: []
   OnEnterSnipRange:
     m_PersistentCalls:
       m_Calls: []
   OnExitSnipRange:
     m_PersistentCalls:
       m_Calls: []
+  cooldownTime: 0.2
+  canOnlyTriggerOnce: 1
   grabbable: {fileID: 3323027654926309439}
 --- !u!82 &4626598884951836227
 AudioSource:

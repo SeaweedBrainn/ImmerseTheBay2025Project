@@ -58,8 +58,13 @@ public class HapticManager : MonoBehaviour
 
         Application.runInBackground = true;            // keep Unity alive during BLE init
         Screen.sleepTimeout = SleepTimeout.NeverSleep; // avoid dozing in handshake
+        SetCommType("ble");
+        SetDevice("1e52");
+        LoadUser("ExampleUser");
+        ConnectCurrentUserAsync();
         new CopyAssets().CopyAllAssets();
         Application.targetFrameRate = 0;
+        
 
 #if UNITY_ANDROID && !UNITY_EDITOR
         SetCommType("ble");
@@ -69,7 +74,6 @@ public class HapticManager : MonoBehaviour
     public void SetCommType(string type) => commType = type;
     public void SetPort(string portName) => port = portName;
     public void SetDevice(string deviceName) => port = $"Afference SBRing-{deviceName.Trim()}";
-
     public void LoadUser(string fileName)
     {
         existingUserPath = Path.Combine(UserDirectory, fileName + ".json");
@@ -162,7 +166,6 @@ public async Task WaitForAndroidFocusAndStabilityAsync(int postFocusDelayMs = 30
         _cts?.Cancel();
         _cts = new CancellationTokenSource();
         var token = _cts.Token;
-
         status = "Attempting connection...";
         Exception lastError = null;
 

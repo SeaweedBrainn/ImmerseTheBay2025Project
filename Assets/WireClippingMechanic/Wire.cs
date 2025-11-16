@@ -110,7 +110,7 @@ public class Wire : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        if (other.name == "IndexFingerCollider")
+        if (other.name.Contains("IndexFingerCollider"))
         {
             // No longer colliding with IndexFingerCollider
             Debug.Log("No longer colliding with IndexFingerCollider");

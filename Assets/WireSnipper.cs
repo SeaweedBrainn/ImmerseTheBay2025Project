@@ -26,7 +26,7 @@ public class WireSnipper : MonoBehaviour
     {
         if (Instance.VisualFeedback != null)
         {
-            Instance.VisualFeedback.SetActive(true);
+            Instance.VisualFeedback.SetActive(GoodWire);
         }
         Debug.Log("OnEnterSnipRangeEvent");
         if (Instance != null)
