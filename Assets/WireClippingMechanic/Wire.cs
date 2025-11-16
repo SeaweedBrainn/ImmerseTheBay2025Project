@@ -9,6 +9,8 @@ public class Wire : MonoBehaviour
     public bool Snipped = false;
 
     public UnityEvent OnSnipEvent;
+    public UnityEvent OnEnterSnipRange;
+    public UnityEvent OnExitSnipRange;
 
     AudioSource audioSource;
 
@@ -29,7 +31,7 @@ public class Wire : MonoBehaviour
 
     void Update()
     {
-        if (grabbable.transform.position != startPosition)
+        if (grabbable != null && grabbable.transform.position != startPosition)
         {
             CutWireWithPinch();
             Destroy(grabbable.gameObject);
@@ -44,10 +46,45 @@ public class Wire : MonoBehaviour
             CutWireModel.SetActive(true);
             Snipped = true;
             OnSnipEvent.Invoke();
+            WireSnipper.OnSnipEvent();
             if (audioSource != null && audioSource.clip != null)
             {
                 audioSource.PlayOneShot(audioSource.clip);
             }
         }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.name.Contains("IndexFingerCollider"))
+        {
+            // Collision detected with IndexFingerCollider
+            Debug.Log("Colliding with IndexFingerCollider");
+            // Add your collision handling logic here
+            OnEnterSnipRange.Invoke();
+        }
+
+        WireSnipper.OnEnterSnipRangeEvent();
+    }
+
+    void OnTriggerStay(Collider other)
+    {
+        if (other.name.Contains("IndexFingerCollider"))
+        {
+            // Continuously colliding with IndexFingerCollider
+            // Add your continuous collision handling logic here
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.name == "IndexFingerCollider")
+        {
+            // No longer colliding with IndexFingerCollider
+            Debug.Log("No longer colliding with IndexFingerCollider");
+            OnExitSnipRange.Invoke();
+        }
+
+        WireSnipper.OnExitSnipRangeEvent();
     }
 }
