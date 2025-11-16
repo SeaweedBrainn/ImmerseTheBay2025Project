@@ -4,31 +4,25 @@ using UnityEngine.Events;
 public class ButtonMinigame : MonoBehaviour
 {
     [SerializeField] private float requiredHoldTime = 3f;
+    [SerializeField] private float releaseWindow = 0.5f;
     [SerializeField] private UnityEvent onFinished;
     [SerializeField] private UnityEvent onFailed;
     [SerializeField] private UnityEvent timeEvent;
-    [SerializeField] private UnityEvent onHover;
-    [SerializeField] private UnityEvent onUnhover;
-    [SerializeField] private UnityEvent onSelect;
-    [SerializeField] private UnityEvent onUnselect;
     private float _holdTime = 0f;
     private bool _isHolding = false;
     private bool _isCompleted = false;
+    private bool _hasReachedRequiredTime = false;
 
     private void Update()
     {
         if (_isHolding && !_isCompleted)
         {
             _holdTime += Time.deltaTime;
-            if (_holdTime >= requiredHoldTime && _holdTime <= requiredHoldTime - .5f)
+            
+            if (_holdTime >= requiredHoldTime && !_hasReachedRequiredTime)
             {
-                _isCompleted = true;
+                _hasReachedRequiredTime = true;
                 timeEvent.Invoke();
-                onFinished.Invoke();
-            }
-            else 
-            {
-                onFailed.Invoke();
             }
         }
     }
@@ -37,14 +31,27 @@ public class ButtonMinigame : MonoBehaviour
         if (!_isCompleted)
         {
             _isHolding = true;
+            _holdTime = 0f;
+            _hasReachedRequiredTime = false;
         }
     }
     public void OnButtonReleased()
     {
+        _isHolding = false;
+        
         if (!_isCompleted)
         {
-            _isHolding = false;
-            onFailed.Invoke();
+            if (_hasReachedRequiredTime && _holdTime <= requiredHoldTime + releaseWindow)
+            {
+                _isCompleted = true;
+                onFinished.Invoke();
+            }
+            else
+            {
+                onFailed.Invoke();
+            }
+            _holdTime = 0f;
+            _hasReachedRequiredTime = false;
         }
     }
     public float GetProgress()
