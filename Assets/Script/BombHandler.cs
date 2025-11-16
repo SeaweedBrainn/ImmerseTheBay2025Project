@@ -1,25 +1,29 @@
 using UnityEngine;
+using UnityEngine.Events;
 using TMPro;
 
 public class BombHandler : MonoBehaviour
 {
     [Header("Strike Objects")]
-    public GameObject[] strikeObjects = new GameObject[3];
-    [Header("Replacement Prefab")]
-    public GameObject replacementPrefab;
+    public GameObject[] strikeObjects;
+    [Header("Replacement Material")]
+    public Material strikeMaterial;
     
     public float countdownTime = 0f;
     public TextMeshPro timerText;
 
+    public UnityEvent OnExplodeEvent;
+
     private int strikesRemaining = 3;
     private float currentTime;
     private bool hasExploded = false;
-    private bool[] objectReplaced = new bool[3];
+    private bool[] objectReplaced;
 
     void Start()
     {
         currentTime = countdownTime;
         strikesRemaining = strikeObjects.Length;
+        objectReplaced = new bool[strikeObjects.Length];
         UpdateDisplay();
     }
 
@@ -41,24 +45,17 @@ public class BombHandler : MonoBehaviour
     {
         if (timerText)
         {
-            if (countdownTime > 0)
-            {
-                timerText.text = $"Strikes: {strikesRemaining} | Time: {currentTime:F1}s";
-            }
-            else
-            {
-                timerText.text = $"Strikes Remaining: {strikesRemaining}";
-            }
+            timerText.text = $"{currentTime:F1}s";
         }
     }
 
-    public void HandleStrike()
+    public void Strike()
     {
         if (hasExploded) return;
 
         for (int i = 0; i < strikeObjects.Length; i++)
         {
-            if (!objectReplaced[i] && strikeObjects[i] != null)
+            if (!objectReplaced[i] && strikeObjects[i])
             {
                 ReplaceStrikeObject(i);
                 return;
@@ -66,26 +63,18 @@ public class BombHandler : MonoBehaviour
         }
     }
 
-    public void ReplaceStrikeObject(int strikeIndex)
+    private void ReplaceStrikeObject(int strikeIndex)
     {
         if (hasExploded) return;
         if (strikeIndex < 0 || strikeIndex >= strikeObjects.Length) return;
         if (objectReplaced[strikeIndex]) return;
-        if (strikeObjects[strikeIndex] && replacementPrefab)
+        if (strikeObjects[strikeIndex] && strikeMaterial)
         {
-            Vector3 position = strikeObjects[strikeIndex].transform.position;
-            Quaternion rotation = strikeObjects[strikeIndex].transform.rotation;
-            Transform parent = strikeObjects[strikeIndex].transform.parent;
-
-            GameObject replacement = Instantiate(replacementPrefab, position, rotation, parent);
-
-            Destroy(strikeObjects[strikeIndex]);
-            strikeObjects[strikeIndex] = null;
+            MeshRenderer mr = strikeObjects[strikeIndex].GetComponent<MeshRenderer>();
+            mr.material = strikeMaterial;
             objectReplaced[strikeIndex] = true;
-
+            Debug.Log("Object replaced: " + objectReplaced[strikeIndex]);
             strikesRemaining--;
-            UpdateDisplay();
-
             if (strikesRemaining <= 0)
             {
                 Explode();
@@ -112,20 +101,17 @@ public class BombHandler : MonoBehaviour
         hasExploded = true;
         for (int i = 0; i < strikeObjects.Length; i++)
         {
-            if (strikeObjects[i] && replacementPrefab)
+            if (strikeObjects[i] && !objectReplaced[i])
             {
-                Vector3 position = strikeObjects[i].transform.position;
-                Quaternion rotation = strikeObjects[i].transform.rotation;
-                Transform parent = strikeObjects[i].transform.parent;
-
-                GameObject replacement = Instantiate(replacementPrefab, position, rotation, parent);
-                Destroy(strikeObjects[i]);
+                MeshRenderer mr = strikeObjects[i].GetComponent<MeshRenderer>();
+                mr.material = strikeMaterial;
             }
         }
         if (timerText)
         {
             timerText.text = "EXPLODED!";
         }
+        OnExplodeEvent.Invoke();
     }
 
     public void TriggerExplosion()
