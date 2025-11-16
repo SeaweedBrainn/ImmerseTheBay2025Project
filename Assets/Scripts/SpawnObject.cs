@@ -64,6 +64,11 @@ public class SpawnObject : MonoBehaviour
         gameObjectToSpawn.transform.position = hitPoint;
         gameObjectToSpawn.transform.rotation = rotation;
 
+        if (_nextSpawnIndex != 0)
+        {
+            gameObjectsToSpawn[_nextSpawnIndex-1].SetActive(false);
+        }
+
         isSpawning = false;
         UpdateNextSpawnIndex();
     }
