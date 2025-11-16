@@ -36,17 +36,27 @@ public class BombHandler : MonoBehaviour
         if (countdownTime > 0 && !hasExploded && currentTime > 0)
         {
             currentTime -= Time.deltaTime;
-            UpdateDisplay();
             if (currentTime <= 0)
             {
                 currentTime = 0;
                 Explode();
             }
+            UpdateDisplay();
         }
     }
 
     void UpdateDisplay()
     {
+        if (hasWon)
+        {
+            timerText.text = "Clear";
+            return;
+        }
+        if (hasExploded)
+        {
+            timerText.text = "Boom!";
+            return;
+        }
         if (timerText)
         {
             timerText.text = $"{currentTime:F1}s";
@@ -81,6 +91,8 @@ public class BombHandler : MonoBehaviour
             strikesRemaining--;
             if (strikesRemaining <= 0)
             {
+                hasExploded = true;
+                UpdateDisplay();
                 Explode();
             }
         }
@@ -111,10 +123,7 @@ public class BombHandler : MonoBehaviour
                 mr.material = strikeMaterial;
             }
         }
-        if (timerText)
-        {
-            timerText.text = "EXPLODED!";
-        }
+        UpdateDisplay();
         OnExplodeEvent.Invoke();
     }
 
