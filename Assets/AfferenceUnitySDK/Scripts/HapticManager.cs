@@ -401,13 +401,13 @@ public async Task WaitForAndroidFocusAndStabilityAsync(int postFocusDelayMs = 30
 
     public void ToggleStim() { if (stimActive) StopStim(); else StartStim(); }
 
-    void StartStim()
+    public void StartStim()
     {
         hs.StartEngine();
         stimActive = true;
     }
 
-    void StopStim()
+    public void StopStim()
     {
         hs.StopEngine();
         stimActive = false;
