@@ -628,6 +628,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 476023754587381949, guid: 54cbeef8eef7943a0b26d889b352539c, type: 3}
+      propertyPath: countdownTime
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 476023754587381949, guid: 54cbeef8eef7943a0b26d889b352539c, type: 3}
       propertyPath: OnWinEvent.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -3347,6 +3351,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 974427296}
     - target: {fileID: 476023754587381949, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
+      propertyPath: countdownTime
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 476023754587381949, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
       propertyPath: OnWinEvent.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -4226,6 +4234,10 @@ PrefabInstance:
     - target: {fileID: 158667159610838722, guid: 377256eaef86d284ebae26a474afe287, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4104879893077481089, guid: 377256eaef86d284ebae26a474afe287, type: 3}
+      propertyPath: countdownTime
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 4104879893077481089, guid: 377256eaef86d284ebae26a474afe287, type: 3}
       propertyPath: OnWinEvent.m_PersistentCalls.m_Calls.Array.size
@@ -5317,6 +5329,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2643514683108917859, guid: 80bc12a05f69b4cd1bd07ec90a6f4268, type: 3}
+      propertyPath: GoodWire
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4104879893077481089, guid: 80bc12a05f69b4cd1bd07ec90a6f4268, type: 3}
+      propertyPath: countdownTime
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 4104879893077481089, guid: 80bc12a05f69b4cd1bd07ec90a6f4268, type: 3}
       propertyPath: OnWinEvent.m_PersistentCalls.m_Calls.Array.size
       value: 3
@@ -5496,10 +5516,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 662552950266185796, guid: 80bc12a05f69b4cd1bd07ec90a6f4268, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80bc12a05f69b4cd1bd07ec90a6f4268, type: 3}
 --- !u!1 &1453591551 stripped
 GameObject:
