@@ -3179,6 +3179,94 @@ PrefabInstance:
       propertyPath: RightPinchSphere
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5257853861457745420, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
+      propertyPath: victoryEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5257853861457745420, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
+      propertyPath: victoryEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5257853861457745420, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
+      propertyPath: victoryEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5257853861457745420, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
+      propertyPath: victoryEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5257853861457745420, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
+      propertyPath: victoryEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1179819361}
+    - target: {fileID: 5257853861457745420, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
+      propertyPath: victoryEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1614253541}
+    - target: {fileID: 5257853861457745420, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
+      propertyPath: victoryEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 51273767}
+    - target: {fileID: 5257853861457745420, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
+      propertyPath: victoryEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5257853861457745420, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
+      propertyPath: victoryEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5257853861457745420, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
+      propertyPath: victoryEvent.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5257853861457745420, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
+      propertyPath: victoryEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 5257853861457745420, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
+      propertyPath: victoryEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 5257853861457745420, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
+      propertyPath: victoryEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 5257853861457745420, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
+      propertyPath: victoryEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5257853861457745420, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
+      propertyPath: victoryEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5257853861457745420, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
+      propertyPath: victoryEvent.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5257853861457745420, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
+      propertyPath: victoryEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5257853861457745420, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
+      propertyPath: victoryEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5257853861457745420, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
+      propertyPath: victoryEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5257853861457745420, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
+      propertyPath: victoryEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5257853861457745420, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
+      propertyPath: victoryEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5257853861457745420, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
+      propertyPath: victoryEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 9180154491074253276, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
       propertyPath: LeftHand
       value: 
