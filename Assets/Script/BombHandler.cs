@@ -94,8 +94,6 @@ public class BombHandler : MonoBehaviour
             strikesRemaining--;
             if (strikesRemaining <= 0)
             {
-                hasExploded = true;
-                UpdateDisplay();
                 Explode();
             }
         }
@@ -152,10 +150,6 @@ public class BombHandler : MonoBehaviour
                     mr.material = winMaterial;
                 }
             }
-        }
-        if (timerText)
-        {
-            timerText.text = "DEFUSED!";
         }
         OnWinEvent.Invoke();
     }

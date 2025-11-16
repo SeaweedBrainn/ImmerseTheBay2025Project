@@ -2733,101 +2733,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4104879893077481089, guid: 377256eaef86d284ebae26a474afe287, type: 3}
-      propertyPath: winMaterial
-      value: 
-      objectReference: {fileID: 2100000, guid: 428a675a37977458aa286289b7fa01ff, type: 2}
     - target: {fileID: 6534682752008816539, guid: 377256eaef86d284ebae26a474afe287, type: 3}
       propertyPath: m_Name
       value: Bomb Button
       objectReference: {fileID: 0}
-    - target: {fileID: 6534682752008816539, guid: 377256eaef86d284ebae26a474afe287, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8625029418124087209, guid: 377256eaef86d284ebae26a474afe287, type: 3}
-      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8625029418124087209, guid: 377256eaef86d284ebae26a474afe287, type: 3}
-      propertyPath: _whenUnselect.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8625029418124087209, guid: 377256eaef86d284ebae26a474afe287, type: 3}
-      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8625029418124087209, guid: 377256eaef86d284ebae26a474afe287, type: 3}
-      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1167509089}
-    - target: {fileID: 8625029418124087209, guid: 377256eaef86d284ebae26a474afe287, type: 3}
-      propertyPath: _whenUnselect.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8625029418124087209, guid: 377256eaef86d284ebae26a474afe287, type: 3}
-      propertyPath: _whenUnselect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1167509089}
-    - target: {fileID: 8625029418124087209, guid: 377256eaef86d284ebae26a474afe287, type: 3}
-      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8625029418124087209, guid: 377256eaef86d284ebae26a474afe287, type: 3}
-      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnButtonPressed
-      objectReference: {fileID: 0}
-    - target: {fileID: 8625029418124087209, guid: 377256eaef86d284ebae26a474afe287, type: 3}
-      propertyPath: _whenUnselect.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8625029418124087209, guid: 377256eaef86d284ebae26a474afe287, type: 3}
-      propertyPath: _whenUnselect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnButtonReleased
-      objectReference: {fileID: 0}
-    - target: {fileID: 8625029418124087209, guid: 377256eaef86d284ebae26a474afe287, type: 3}
-      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ButtonMinigame, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8625029418124087209, guid: 377256eaef86d284ebae26a474afe287, type: 3}
-      propertyPath: _whenUnselect.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ButtonMinigame, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8625029418124087209, guid: 377256eaef86d284ebae26a474afe287, type: 3}
-      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 8625029418124087209, guid: 377256eaef86d284ebae26a474afe287, type: 3}
-      propertyPath: _whenUnselect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 158667159610838722, guid: 377256eaef86d284ebae26a474afe287, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 662552950266185796, guid: 377256eaef86d284ebae26a474afe287, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1167509088}
-    m_AddedComponents: []
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 377256eaef86d284ebae26a474afe287, type: 3}
 --- !u!1 &623400842 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6534682752008816539, guid: 377256eaef86d284ebae26a474afe287, type: 3}
-  m_PrefabInstance: {fileID: 623400841}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &623400843 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4104879893077481089, guid: 377256eaef86d284ebae26a474afe287, type: 3}
-  m_PrefabInstance: {fileID: 623400841}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 623400842}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c204f3d3bd25ee64daebaaf0ef6bb359, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &623400844 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 158667159610838722, guid: 377256eaef86d284ebae26a474afe287, type: 3}
   m_PrefabInstance: {fileID: 623400841}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &666947770
@@ -5330,85 +5250,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!1 &1167509087
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1167509088}
-  - component: {fileID: 1167509089}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1167509088
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1167509087}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.0272083, y: -0.5818721, z: -1.6172994}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 623400844}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1167509089
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1167509087}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35a3af0fdd261e943940aff5c089d998, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  requiredHoldTime: 3
-  releaseWindow: 0.5
-  onFinished:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 623400843}
-        m_TargetAssemblyTypeName: BombHandler, Assembly-CSharp
-        m_MethodName: Win
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onFailed:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 623400843}
-        m_TargetAssemblyTypeName: BombHandler, Assembly-CSharp
-        m_MethodName: Strike
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  timeEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &1170876557
 GameObject:
   m_ObjectHideFlags: 0
