@@ -3614,6 +3614,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1522591530959101990, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.25
+      objectReference: {fileID: 0}
     - target: {fileID: 2001095311268078752, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3693,6 +3697,10 @@ PrefabInstance:
     - target: {fileID: 4021669747383991169, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
       propertyPath: RightPinchSphere
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4191638958583896862, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.25
       objectReference: {fileID: 0}
     - target: {fileID: 5257853861457745420, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
       propertyPath: onFinished.m_PersistentCalls.m_Calls.Array.size
@@ -3789,6 +3797,14 @@ PrefabInstance:
     - target: {fileID: 5795165546981960420, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
       propertyPath: GoodWire
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6666338427951518870, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6739907747617442427, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.25
       objectReference: {fileID: 0}
     - target: {fileID: 9180154491074253276, guid: 76136de6ab5b3404fb07172a49048717, type: 3}
       propertyPath: LeftHand
