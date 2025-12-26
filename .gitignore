@@ -102,3 +102,4 @@ ProjectSettings/EditorBuildSettings.asset
 ProjectSettings/ProjectSettings.asset
 ProjectSettings/ShaderGraphSettings.asset
 Assets/XR/Settings/OpenXR Package Settings.asset
+.DS_Store
